@@ -1,5 +1,6 @@
 .idea/
 .clwb
 .vscode/
+cmake-build-debug/
 
 .exe

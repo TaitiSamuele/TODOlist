@@ -1,6 +1,8 @@
 file(REMOVE_RECURSE
-  "CMakeFiles/untitled1.dir/List.cpp.o"
-  "CMakeFiles/untitled1.dir/List.cpp.o.d"
+  "CMakeFiles/untitled1.dir/ToDoElement.cpp.o"
+  "CMakeFiles/untitled1.dir/ToDoElement.cpp.o.d"
+  "CMakeFiles/untitled1.dir/ToDoList.cpp.o"
+  "CMakeFiles/untitled1.dir/ToDoList.cpp.o.d"
   "CMakeFiles/untitled1.dir/ToDoListManager.cpp.o"
   "CMakeFiles/untitled1.dir/ToDoListManager.cpp.o.d"
   "CMakeFiles/untitled1.dir/main.cpp.o"

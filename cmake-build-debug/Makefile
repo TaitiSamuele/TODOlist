@@ -129,29 +129,53 @@ untitled1/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/untitled1.dir/build.make CMakeFiles/untitled1.dir/build
 .PHONY : untitled1/fast
 
-List.o: List.cpp.o
-.PHONY : List.o
+ToDoElement.o: ToDoElement.cpp.o
+.PHONY : ToDoElement.o
 
 # target to build an object file
-List.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/untitled1.dir/build.make CMakeFiles/untitled1.dir/List.cpp.o
-.PHONY : List.cpp.o
+ToDoElement.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/untitled1.dir/build.make CMakeFiles/untitled1.dir/ToDoElement.cpp.o
+.PHONY : ToDoElement.cpp.o
 
-List.i: List.cpp.i
-.PHONY : List.i
+ToDoElement.i: ToDoElement.cpp.i
+.PHONY : ToDoElement.i
 
 # target to preprocess a source file
-List.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/untitled1.dir/build.make CMakeFiles/untitled1.dir/List.cpp.i
-.PHONY : List.cpp.i
+ToDoElement.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/untitled1.dir/build.make CMakeFiles/untitled1.dir/ToDoElement.cpp.i
+.PHONY : ToDoElement.cpp.i
 
-List.s: List.cpp.s
-.PHONY : List.s
+ToDoElement.s: ToDoElement.cpp.s
+.PHONY : ToDoElement.s
 
 # target to generate assembly for a file
-List.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/untitled1.dir/build.make CMakeFiles/untitled1.dir/List.cpp.s
-.PHONY : List.cpp.s
+ToDoElement.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/untitled1.dir/build.make CMakeFiles/untitled1.dir/ToDoElement.cpp.s
+.PHONY : ToDoElement.cpp.s
+
+ToDoList.o: ToDoList.cpp.o
+.PHONY : ToDoList.o
+
+# target to build an object file
+ToDoList.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/untitled1.dir/build.make CMakeFiles/untitled1.dir/ToDoList.cpp.o
+.PHONY : ToDoList.cpp.o
+
+ToDoList.i: ToDoList.cpp.i
+.PHONY : ToDoList.i
+
+# target to preprocess a source file
+ToDoList.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/untitled1.dir/build.make CMakeFiles/untitled1.dir/ToDoList.cpp.i
+.PHONY : ToDoList.cpp.i
+
+ToDoList.s: ToDoList.cpp.s
+.PHONY : ToDoList.s
+
+# target to generate assembly for a file
+ToDoList.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/untitled1.dir/build.make CMakeFiles/untitled1.dir/ToDoList.cpp.s
+.PHONY : ToDoList.cpp.s
 
 ToDoListManager.o: ToDoListManager.cpp.o
 .PHONY : ToDoListManager.o
@@ -210,9 +234,12 @@ help:
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
 	@echo "... untitled1"
-	@echo "... List.o"
-	@echo "... List.i"
-	@echo "... List.s"
+	@echo "... ToDoElement.o"
+	@echo "... ToDoElement.i"
+	@echo "... ToDoElement.s"
+	@echo "... ToDoList.o"
+	@echo "... ToDoList.i"
+	@echo "... ToDoList.s"
 	@echo "... ToDoListManager.o"
 	@echo "... ToDoListManager.i"
 	@echo "... ToDoListManager.s"

@@ -5,13 +5,19 @@
 #ifndef LIST_H
 #define LIST_H
 
+#include "ToDoElement.h"
+#include <vector>
 
-
-class List {
+class ToDoList {
 private:
-    ve
-};
+    vector<ToDoElement> elements;
+    string filePath;
+public:
 
+
+
+
+};
 
 
 #endif //LIST_H
