@@ -10,7 +10,6 @@ using namespace std;
 
 class ToDoElement {
 private:
-   int id;
    string title;
    string content;
    string date;
@@ -23,6 +22,8 @@ public:
 
    bool fill(string message); //ogni attributo e' separato da ';', la virgola potrebbe essere usata nel content
    string toString();//delego la froamttazione della stringa agli elementi
+   string toFileString();//delego la formattazione della stringa agli elementi, "|" separa i vari elementi, ";" separa gli attributi
+
 
 };
 
