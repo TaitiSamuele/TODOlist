@@ -18,20 +18,18 @@ private:
     vector<ToDoElement> elements;
     string filePath;
 public:
-    explicit ToDoList(const string &file_path): filePath(file_path) {
-
-    }
+    explicit ToDoList(const string &file_path): filePath(file_path) {}
     ~ToDoList() = default;
 
     bool getElementsOnFile();
     bool printElementsOnFile();
-
-
+    bool addElement(const ToDoElement& element);
+    bool removeElementByTitle(const string& title);
+    bool sortByPriority();
+    bool completeElementByTitle(const string& title);
+    bool removeCompletedElements();
 
     string toString();
-
-
-
 };
 
 
