@@ -24,6 +24,7 @@ public:
     bool getElementsOnFile();
     bool printElementsOnFile();
     bool addElement(const ToDoElement& element);
+    bool addElement(const string &title, const string &content, int priority);
     bool removeElementByTitle(const string& title);
     bool sortByPriority();
     bool completeElementByTitle(const string& title);

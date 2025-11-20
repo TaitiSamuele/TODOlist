@@ -25,6 +25,12 @@ bool ToDoList::printElementsOnFile() {
 }
 
 bool ToDoList::addElement(const ToDoElement &element) {
+    elements.push_back(element);
+    return true;
+}
+bool ToDoList::addElement(const string &title, const string &content, int priority) {
+    ToDoElement element(title, content, priority);
+    elements.push_back(element);
     return true;
 }
 
