@@ -6,6 +6,42 @@
 #include <algorithm>
 using namespace std;
 
+
+void ToDoList::menu() {
+    char choice = '';
+    do {
+        switch (choice) {
+            case 'a': {
+                //add element by user input
+                string title, content;
+                int priority;
+                cout << "inserisci titolo: ";
+                cin >> title;
+                cout << "inserisci contenuto: ";
+                cin >> content;
+                cout << "inserisci priorita (1-10): ";
+                cin >> priority;
+                addElement(title, content, priority);
+            }
+            break;
+            case 's': {
+                //remove by title
+                string title;
+                cout << "inserisci titolo da rimuovere: ";
+                cin >> title;
+                removeElementByTitle(title);
+            }
+            case 'd': {
+                //sort by priority
+                sortByPriority();
+            }
+
+            default:
+                cout << "nesssuna scelta valida\n";
+        }
+    } while ('q' != choice);
+}
+
 bool ToDoList::getElementsOnFile() {
     string line;
     ifstream file(filePath);
@@ -18,7 +54,7 @@ bool ToDoList::getElementsOnFile() {
 
 bool ToDoList::printElementsOnFile() {
     ofstream file(filePath);
-    for (ToDoElement& element : elements) {
+    for (ToDoElement &element: elements) {
         file << element.toFileString();
     }
     return true;
@@ -28,6 +64,7 @@ bool ToDoList::addElement(const ToDoElement &element) {
     elements.push_back(element);
     return true;
 }
+
 bool ToDoList::addElement(const string &title, const string &content, int priority) {
     ToDoElement element(title, content, priority);
     elements.push_back(element);
@@ -35,7 +72,7 @@ bool ToDoList::addElement(const string &title, const string &content, int priori
 }
 
 bool ToDoList::removeElementByTitle(const string &title) {
-    for (ToDoElement& element: elements) {
+    for (ToDoElement &element: elements) {
         if (title == element.getTitle()) {
             elements.erase(elements.begin());
         }
@@ -49,7 +86,7 @@ bool ToDoList::sortByPriority() {
 }
 
 bool ToDoList::completeElementByTitle(const string &title) {
-    for (ToDoElement& element: elements) {
+    for (ToDoElement &element: elements) {
         if (title == element.getTitle()) {
             element.setCompleted();
         }
@@ -59,7 +96,7 @@ bool ToDoList::completeElementByTitle(const string &title) {
 
 bool ToDoList::removeCompletedElements() {
     int i = 0;
-    for (ToDoElement& element: elements) {
+    for (ToDoElement &element: elements) {
         if (element.getCompleted()) {
             elements.erase(elements.begin() + i);
         }
@@ -68,9 +105,17 @@ bool ToDoList::removeCompletedElements() {
     return true;
 }
 
+string ToDoList::toFileString() {
+    return filePath + "\n";
+}
+
+bool ToDoList::operator==(const string &s) const {
+    return this->filePath == s;
+}
+
 string ToDoList::toString() {
     string s = "";
-    for (ToDoElement& element : elements) {
+    for (ToDoElement &element: elements) {
         s += element.toString() + "\n";
     }
     return s;

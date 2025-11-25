@@ -21,6 +21,7 @@ public:
     explicit ToDoList(const string &file_path): filePath(file_path) {}
     ~ToDoList() = default;
 
+    void menu();
     bool getElementsOnFile();
     bool printElementsOnFile();
     bool addElement(const ToDoElement& element);
@@ -29,6 +30,8 @@ public:
     bool sortByPriority();
     bool completeElementByTitle(const string& title);
     bool removeCompletedElements();
+    string toFileString();
+    bool operator==(const string& s) const;
 
     string toString();
 };

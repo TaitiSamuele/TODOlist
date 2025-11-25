@@ -1,6 +1,7 @@
 .idea/
 .clwb
 .vscode/
-cmake-build-debug/
+.files/*.txt
+lists.txt
 
 .exe

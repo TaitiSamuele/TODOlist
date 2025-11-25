@@ -10,14 +10,16 @@
 #include <string>
 using namespace std;
 
-//in questa classe gestirò più liste di ToDoElement, ognuna con un proprio file di salvataggio,
+//in questa classe gestirò più liste di ToDoElement, ognuna con un proprio file di salvataggio, i file disponibili vengono gestiti in un file "lists.txt"
 
 class ToDoListManager {
 private:
     vector<ToDoList> lists;
     string file = "lists.txt";
 public:
-    ToDoListManager() = default;
+    ToDoListManager(){
+        getListsFromFile();
+    };
     ~ToDoListManager() = default;
 
     bool menu();
@@ -25,8 +27,6 @@ public:
     bool saveListsToFile();
     bool removeListByFileName(const string& fileName);
     bool addList(const string& fileName);
-    bool selectList(const string& fileName);
-
 };
 
 

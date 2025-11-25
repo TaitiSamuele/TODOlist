@@ -5,13 +5,12 @@ using namespace std;
 
 
 int main() {
-    ToDoList list = ToDoList("todo.txt");
+    ToDoList list = ToDoList("../files/todo.txt");
     list.getElementsOnFile();
 
-    ToDoElement element = ToDoElement("sleep", "get at least 8 hours of sleep", 5);
-    list.addElement(element);
-    list.addElement("exercise", "go for a 30-minute run", 3);
-    list.addElement("whatch_movie", "watch a new movie on streaming platform", 7);
+    list.addElement("comprare banane", "andare al supermercato e comprare delle banane", 5);
+    //list.completeElementByTitle("comprare banane");
+    list.removeCompletedElements();
 
     cout << list.toString();
     list.printElementsOnFile();
