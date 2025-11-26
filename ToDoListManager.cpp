@@ -4,7 +4,56 @@
 
 #include "ToDoListManager.h"
 
-bool ToDoListManager::menu() {
+void ToDoListManager::menu() {
+    //menu to manage multiple ToDoLists
+    char choice;
+    do {
+        cout<<"\nMenu ToDoListManager:\n";
+        cout<<"w: aggiungi nuova lista\n";
+        cout<<"e: rimuovi lista per nome file\n";
+        cout<<"r: gestisci lista per nome file\n";
+        cout<<"q: esci\n";
+        cin>>choice;
+        switch (choice) {
+            case 'q':
+                cout << "uscita...\n";
+            break;
+            case 'w': {
+                //add new list
+                string fileName;
+                cout << "inserisci il nome del file per la nuova lista: ";
+                cin >> fileName;
+                addList(fileName);
+                saveListsToFile();
+            }
+            break;
+            case 'e': {
+                //remove list by file name
+                string fileName;
+                cout << "inserisci il nome del file della lista da rimuovere: ";
+                cin >> fileName;
+                removeListByFileName(fileName);
+                saveListsToFile();
+            }
+            break;
+            case 'r': {
+                //add element to a list
+                string fileName;
+                cout << "inserisci il nome del file della lista a cui aggiungere un elemento: ";
+                cin >> fileName;
+                for (ToDoList &list: lists) {
+                    if (list == fileName) {
+                        list.menu();
+                        list.printElementsOnFile();
+                    }
+                }
+            }
+            default:
+                cout << "nesssuna scelta valida\n";
+        }
+        cout << "premi una lettera qualsiasi per continuare... q per uscire\n";
+        cin>>choice;
+    }while (choice != 'q');
 
 }
 
@@ -38,5 +87,6 @@ bool ToDoListManager::removeListByFileName(const string &fileName) {
 
 bool ToDoListManager::addList(const string &fileName){
     lists.push_back(ToDoList(fileName));
+    return true;
 }
 

@@ -38,13 +38,13 @@ bool ToDoElement::fill(string message) {
 }
 
 string ToDoElement::toString() {
-    string s = "";
-    s += title + "\n " + content + "\n" + date + "\n Priority: " + to_string(priority) + "\n Completed: " + (completed ? "Yes" : "No") + "\n";
+    string s;
+    s += "\033[33m" + title + "\033[0m\n\t" + content + "\n\t" + date + "\n\tPriority: " + to_string(priority) + "\n\tCompleted: " + (completed ? "\033[32mYes\033[0m" : "\033[31mNo\033[0m") + "\n";
     return s;
 }
 
 string ToDoElement::toFileString() {
-    string s = "";
+    string s;
     s += title + ";" + content + ";" + date + ";" + to_string(priority) + ";" + (completed ? "1" : "0") + "\n";
     replace(s.begin(), s.end(), ' ', '_');
     return s;

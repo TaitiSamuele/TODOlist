@@ -22,7 +22,7 @@ public:
     };
     ~ToDoListManager() = default;
 
-    bool menu();
+    void menu();
     bool getListsFromFile();
     bool saveListsToFile();
     bool removeListByFileName(const string& fileName);

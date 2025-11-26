@@ -4,22 +4,38 @@
 
 #include "ToDoList.h"
 #include <algorithm>
+#include <limits>
 using namespace std;
 
 
 void ToDoList::menu() {
-    char choice = '';
+    char choice;
+    //clear input buffer
     do {
+        //clear terminal and show menu
+        cout << "\nMenu ToDoList:\n";
+        cout << "a: aggiungi elemento\n";
+        cout << "s: rimuovi elemento per titolo\n";
+        cout << "d: ordina per priorita\n";
+        cout << "f: completa elemento per titolo\n";
+        cout << "g: rimuovi elementi completati\n";
+        cout << "h: stampa elementi\n";
+        cout << "j: salva su file\n";
+        cout << "k: carica da file\n";
+        cout << "q: esci\n";
+        cout << "inserisci scelta: ";
+        cin >> choice;
         switch (choice) {
             case 'a': {
                 //add element by user input
                 string title, content;
                 int priority;
+                cin.ignore(numeric_limits<streamsize>::max(), '\n');
                 cout << "inserisci titolo: ";
-                cin >> title;
+                getline(cin,title);
                 cout << "inserisci contenuto: ";
-                cin >> content;
-                cout << "inserisci priorita (1-10): ";
+                getline(cin,content);
+                cout << "inserisci priorita (1 la massima -> 10 la minima (valori < 1 vengono inseriti massimi, > 10 vine inserito il minimo): ";
                 cin >> priority;
                 addElement(title, content, priority);
             }
@@ -31,14 +47,52 @@ void ToDoList::menu() {
                 cin >> title;
                 removeElementByTitle(title);
             }
+            break;
             case 'd': {
                 //sort by priority
+                cout<<"ordinamento per priorita...\n";
                 sortByPriority();
             }
-
+            break;
+            case 'f': {
+                //complete by title
+                string title;
+                cout << "inserisci titolo da completare: ";
+                cin >> title;
+                completeElementByTitle(title);
+            }
+            break;
+            case 'g': {
+                //remove completed elements
+                cout<<"rimozione elementi completati...\n";
+                removeCompletedElements();
+            }
+            break;
+            case 'h': {
+                //print elements
+                cout << toString();
+            }
+            break;
+            case 'j': {
+                //save to file
+                cout<<"salvataggio su file...\n";
+                printElementsOnFile();
+            }
+            break;
+            case 'k': {
+                //load from file
+                cout<<"caricamento da file...\n";
+                getElementsOnFile();
+            }
+            break;
+            case 'q':
+                cout << "uscita...\n";
+            break;
             default:
                 cout << "nesssuna scelta valida\n";
         }
+        cout << "premi una lettera qualsiasi per continuare... q per uscire\n";
+        cin>>choice;
     } while ('q' != choice);
 }
 
@@ -114,7 +168,7 @@ bool ToDoList::operator==(const string &s) const {
 }
 
 string ToDoList::toString() {
-    string s = "";
+    string s;
     for (ToDoElement &element: elements) {
         s += element.toString() + "\n";
     }
