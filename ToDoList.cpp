@@ -91,14 +91,19 @@ void ToDoList::menu() {
             default:
                 cout << "nesssuna scelta valida\n";
         }
-        cout << "premi una lettera qualsiasi per continuare... q per uscire\n";
-        cin>>choice;
+        if (choice != 'q') {
+            cout << "premi una lettera qualsiasi per continuare... q per uscire\n";
+            cin>>choice;
+        }
     } while ('q' != choice);
+    cout<<"uscita dalla lista...\n";
+    cout<<"salvataggio su file...\n";
+    printElementsOnFile();
 }
 
 bool ToDoList::getElementsOnFile() {
     string line;
-    ifstream file(filePath);
+    ifstream file("../files/" + filePath);
     while (file >> line) {
         ToDoElement element(line);
         elements.push_back(element);
@@ -107,7 +112,7 @@ bool ToDoList::getElementsOnFile() {
 }
 
 bool ToDoList::printElementsOnFile() {
-    ofstream file(filePath);
+    ofstream file("../files/" + filePath);
     for (ToDoElement &element: elements) {
         file << element.toFileString();
     }
@@ -168,9 +173,9 @@ bool ToDoList::operator==(const string &s) const {
 }
 
 string ToDoList::toString() {
-    string s;
+    string s = filePath + "\n";
     for (ToDoElement &element: elements) {
-        s += element.toString() + "\n";
+        s += "\t" + element.toString() + "\n";
     }
     return s;
 }

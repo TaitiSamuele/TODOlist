@@ -11,7 +11,8 @@ void ToDoListManager::menu() {
         cout<<"\nMenu ToDoListManager:\n";
         cout<<"w: aggiungi nuova lista\n";
         cout<<"e: rimuovi lista per nome file\n";
-        cout<<"r: gestisci lista per nome file\n";
+        cout<<"r: stampa la lista\n";
+        cout<<"t: usa lista per nome file\n";
         cout<<"q: esci\n";
         cin>>choice;
         switch (choice) {
@@ -37,24 +38,33 @@ void ToDoListManager::menu() {
             }
             break;
             case 'r': {
-                //add element to a list
+                //print all lists
+                for (ToDoList &list: lists) {
+                    cout << "Lista da file: " << list.toString() << "\n";
+                }
+            }
+            break;
+            case 't': {
+                //use list by file name
                 string fileName;
-                cout << "inserisci il nome del file della lista a cui aggiungere un elemento: ";
+                cout << "inserisci il nome del file che vuoi usare: ";
                 cin >> fileName;
                 for (ToDoList &list: lists) {
                     if (list == fileName) {
                         list.menu();
-                        list.printElementsOnFile();
                     }
                 }
             }
+            break;
             default:
                 cout << "nesssuna scelta valida\n";
         }
-        cout << "premi una lettera qualsiasi per continuare... q per uscire\n";
-        cin>>choice;
+        if (choice != 'q') {
+            cout << "premi una lettera qualsiasi per continuare... q per uscire\n";
+            cin>>choice;
+        }
     }while (choice != 'q');
-
+    saveListsToFile();
 }
 
 bool ToDoListManager::getListsFromFile() {
@@ -79,6 +89,8 @@ bool ToDoListManager::removeListByFileName(const string &fileName) {
     for (ToDoList &list: lists) {
         if (list == fileName) {
             lists.erase(lists.begin() + i);
+            const char* char_fileName = ("../files/" + fileName).c_str();
+            remove(char_fileName);
         }
         i++;
     }

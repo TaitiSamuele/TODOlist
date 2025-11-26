@@ -15,7 +15,7 @@ using namespace std;
 class ToDoListManager {
 private:
     vector<ToDoList> lists;
-    string file = "lists.txt";
+    string file = "../lists.txt";
 public:
     ToDoListManager(){
         getListsFromFile();

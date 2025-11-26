@@ -18,7 +18,9 @@ private:
     vector<ToDoElement> elements;
     string filePath;
 public:
-    explicit ToDoList(const string &file_path): filePath(file_path) {}
+    explicit ToDoList(const string &file_path): filePath(file_path) {
+        getElementsOnFile();
+    }
     ~ToDoList() = default;
 
     void menu();
