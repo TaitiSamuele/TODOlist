@@ -45,7 +45,7 @@ string ToDoElement::toString() {
 
 string ToDoElement::toFileString() {
     string s;
-    s += title + ";" + content + ";" + date + ";" + to_string(priority) + ";" + (completed ? "1" : "0") + "\n";
+	s += title + "|" + content + "|" + date + "|" + to_string(priority) + "|" + (completed ? "1" : "0") + "\n";
     replace(s.begin(), s.end(), ' ', '_');
     return s;
 }
