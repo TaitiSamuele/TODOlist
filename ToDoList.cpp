@@ -5,6 +5,7 @@
 #include "ToDoList.h"
 #include <algorithm>
 #include <limits>
+#include <iostream>
 using namespace std;
 
 
@@ -31,6 +32,7 @@ void ToDoList::menu() {
                 string title, content;
                 int priority;
                 cin.ignore(numeric_limits<streamsize>::max(), '\n');
+                cout<<"non usare il carattere '|' poichè indurrebbe a errore"; //TODO creare un ecc che quando inserito | da errore
                 cout << "inserisci titolo: ";
                 getline(cin,title);
                 cout << "inserisci contenuto: ";

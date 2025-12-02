@@ -9,4 +9,10 @@ add_executable(untitled1 main.cpp
         ToDoListManager.cpp
         ToDoListManager.h
         ToDoElement.cpp
-        ToDoElement.h)
+        ToDoElement.h
+        unit_testing/test_ToDOElement.cpp
+        unit_testing/test_ToDoList.cpp
+        unit_testing/test_ToDoManager.cpp)
+
+#enable_testing()
+#add_subdirectory(unit_testing)

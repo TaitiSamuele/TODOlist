@@ -12,6 +12,9 @@ set(CMAKE_DEPENDS_DEPENDENCY_FILES
   "/mnt/c/Users/samue/CLionProjects/untitled1/ToDoList.cpp" "CMakeFiles/untitled1.dir/ToDoList.cpp.o" "gcc" "CMakeFiles/untitled1.dir/ToDoList.cpp.o.d"
   "/mnt/c/Users/samue/CLionProjects/untitled1/ToDoListManager.cpp" "CMakeFiles/untitled1.dir/ToDoListManager.cpp.o" "gcc" "CMakeFiles/untitled1.dir/ToDoListManager.cpp.o.d"
   "/mnt/c/Users/samue/CLionProjects/untitled1/main.cpp" "CMakeFiles/untitled1.dir/main.cpp.o" "gcc" "CMakeFiles/untitled1.dir/main.cpp.o.d"
+  "/mnt/c/Users/samue/CLionProjects/untitled1/unit_testing/test_ToDOElement.cpp" "CMakeFiles/untitled1.dir/unit_testing/test_ToDOElement.cpp.o" "gcc" "CMakeFiles/untitled1.dir/unit_testing/test_ToDOElement.cpp.o.d"
+  "/mnt/c/Users/samue/CLionProjects/untitled1/unit_testing/test_ToDoList.cpp" "CMakeFiles/untitled1.dir/unit_testing/test_ToDoList.cpp.o" "gcc" "CMakeFiles/untitled1.dir/unit_testing/test_ToDoList.cpp.o.d"
+  "/mnt/c/Users/samue/CLionProjects/untitled1/unit_testing/test_ToDoManager.cpp" "CMakeFiles/untitled1.dir/unit_testing/test_ToDoManager.cpp.o" "gcc" "CMakeFiles/untitled1.dir/unit_testing/test_ToDoManager.cpp.o.d"
   )
 
 # Targets to which this target links which contain Fortran sources.

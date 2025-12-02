@@ -65,6 +65,16 @@ CMAKE_BINARY_DIR = /mnt/c/Users/samue/CLionProjects/untitled1/cmake-build-debug
 #=============================================================================
 # Targets provided globally by CMake.
 
+# Special rule for the target test
+test:
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --cyan "Running tests..."
+	/usr/bin/ctest --force-new-ctest-process $(ARGS)
+.PHONY : test
+
+# Special rule for the target test
+test/fast: test
+.PHONY : test/fast
+
 # Special rule for the target edit_cache
 edit_cache:
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --cyan "No interactive CMake dialog available..."
@@ -225,6 +235,78 @@ main.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/untitled1.dir/build.make CMakeFiles/untitled1.dir/main.cpp.s
 .PHONY : main.cpp.s
 
+unit_testing/test_ToDOElement.o: unit_testing/test_ToDOElement.cpp.o
+.PHONY : unit_testing/test_ToDOElement.o
+
+# target to build an object file
+unit_testing/test_ToDOElement.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/untitled1.dir/build.make CMakeFiles/untitled1.dir/unit_testing/test_ToDOElement.cpp.o
+.PHONY : unit_testing/test_ToDOElement.cpp.o
+
+unit_testing/test_ToDOElement.i: unit_testing/test_ToDOElement.cpp.i
+.PHONY : unit_testing/test_ToDOElement.i
+
+# target to preprocess a source file
+unit_testing/test_ToDOElement.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/untitled1.dir/build.make CMakeFiles/untitled1.dir/unit_testing/test_ToDOElement.cpp.i
+.PHONY : unit_testing/test_ToDOElement.cpp.i
+
+unit_testing/test_ToDOElement.s: unit_testing/test_ToDOElement.cpp.s
+.PHONY : unit_testing/test_ToDOElement.s
+
+# target to generate assembly for a file
+unit_testing/test_ToDOElement.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/untitled1.dir/build.make CMakeFiles/untitled1.dir/unit_testing/test_ToDOElement.cpp.s
+.PHONY : unit_testing/test_ToDOElement.cpp.s
+
+unit_testing/test_ToDoList.o: unit_testing/test_ToDoList.cpp.o
+.PHONY : unit_testing/test_ToDoList.o
+
+# target to build an object file
+unit_testing/test_ToDoList.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/untitled1.dir/build.make CMakeFiles/untitled1.dir/unit_testing/test_ToDoList.cpp.o
+.PHONY : unit_testing/test_ToDoList.cpp.o
+
+unit_testing/test_ToDoList.i: unit_testing/test_ToDoList.cpp.i
+.PHONY : unit_testing/test_ToDoList.i
+
+# target to preprocess a source file
+unit_testing/test_ToDoList.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/untitled1.dir/build.make CMakeFiles/untitled1.dir/unit_testing/test_ToDoList.cpp.i
+.PHONY : unit_testing/test_ToDoList.cpp.i
+
+unit_testing/test_ToDoList.s: unit_testing/test_ToDoList.cpp.s
+.PHONY : unit_testing/test_ToDoList.s
+
+# target to generate assembly for a file
+unit_testing/test_ToDoList.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/untitled1.dir/build.make CMakeFiles/untitled1.dir/unit_testing/test_ToDoList.cpp.s
+.PHONY : unit_testing/test_ToDoList.cpp.s
+
+unit_testing/test_ToDoManager.o: unit_testing/test_ToDoManager.cpp.o
+.PHONY : unit_testing/test_ToDoManager.o
+
+# target to build an object file
+unit_testing/test_ToDoManager.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/untitled1.dir/build.make CMakeFiles/untitled1.dir/unit_testing/test_ToDoManager.cpp.o
+.PHONY : unit_testing/test_ToDoManager.cpp.o
+
+unit_testing/test_ToDoManager.i: unit_testing/test_ToDoManager.cpp.i
+.PHONY : unit_testing/test_ToDoManager.i
+
+# target to preprocess a source file
+unit_testing/test_ToDoManager.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/untitled1.dir/build.make CMakeFiles/untitled1.dir/unit_testing/test_ToDoManager.cpp.i
+.PHONY : unit_testing/test_ToDoManager.cpp.i
+
+unit_testing/test_ToDoManager.s: unit_testing/test_ToDoManager.cpp.s
+.PHONY : unit_testing/test_ToDoManager.s
+
+# target to generate assembly for a file
+unit_testing/test_ToDoManager.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/untitled1.dir/build.make CMakeFiles/untitled1.dir/unit_testing/test_ToDoManager.cpp.s
+.PHONY : unit_testing/test_ToDoManager.cpp.s
+
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -233,6 +315,7 @@ help:
 	@echo "... depend"
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
+	@echo "... test"
 	@echo "... untitled1"
 	@echo "... ToDoElement.o"
 	@echo "... ToDoElement.i"
@@ -246,6 +329,15 @@ help:
 	@echo "... main.o"
 	@echo "... main.i"
 	@echo "... main.s"
+	@echo "... unit_testing/test_ToDOElement.o"
+	@echo "... unit_testing/test_ToDOElement.i"
+	@echo "... unit_testing/test_ToDOElement.s"
+	@echo "... unit_testing/test_ToDoList.o"
+	@echo "... unit_testing/test_ToDoList.i"
+	@echo "... unit_testing/test_ToDoList.s"
+	@echo "... unit_testing/test_ToDoManager.o"
+	@echo "... unit_testing/test_ToDoManager.i"
+	@echo "... unit_testing/test_ToDoManager.s"
 .PHONY : help
 
 
