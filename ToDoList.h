@@ -34,7 +34,9 @@ public:
     bool removeCompletedElements();
     string toFileString();
     bool operator==(const string& s) const;
-
+    string getFileName(){
+        return filePath;
+    }
     string toString();
 };
 
