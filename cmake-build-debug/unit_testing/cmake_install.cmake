@@ -42,3 +42,8 @@ if(NOT DEFINED CMAKE_OBJDUMP)
   set(CMAKE_OBJDUMP "/usr/bin/objdump")
 endif()
 
+if(NOT CMAKE_INSTALL_LOCAL_ONLY)
+  # Include the install script for the subdirectory.
+  include("/mnt/c/Users/samue/CLionProjects/untitled1/cmake-build-debug/_deps/googletest-build/cmake_install.cmake")
+endif()
+

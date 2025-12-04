@@ -1,0 +1,1 @@
+/usr/bin/c++ -g CMakeFiles/runTests.dir/test_ToDoElement.cpp.o CMakeFiles/runTests.dir/test_ToDoList.cpp.o CMakeFiles/runTests.dir/test_ToDoManager.cpp.o CMakeFiles/runTests.dir/__/ToDoElement.cpp.o CMakeFiles/runTests.dir/__/ToDoList.cpp.o CMakeFiles/runTests.dir/__/ToDoListManager.cpp.o -o runTests  ../lib/libgtest_main.a ../lib/libgtest.a 

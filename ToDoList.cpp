@@ -32,13 +32,13 @@ void ToDoList::menu() {
                 string title, content;
                 int priority;
                 cin.ignore(numeric_limits<streamsize>::max(), '\n');
-                cout<<"non usare il carattere '|' poichè indurrebbe a errore"; //TODO creare un ecc che quando inserito | da errore
+                cout<<"non usare il carattere '|' poichè indurrebbe a errore";
                 cout << "inserisci titolo: ";
                 getline(cin,title);
                 cout << "inserisci contenuto: ";
                 getline(cin,content);
                 cout << "inserisci priorita (1 la massima -> 10 la minima (valori < 1 vengono inseriti massimi, > 10 vine inserito il minimo): ";
-                cin >> priority;
+                try{cin >> priority;}catch (exception){cout<<"errore nell' inserimento della pririta, l'insertimento no e' andato a buon fine\n"; break;}
                 addElement(title, content, priority);
             }
             break;
@@ -122,23 +122,39 @@ bool ToDoList::printElementsOnFile() {
 }
 
 bool ToDoList::addElement(const ToDoElement &element) {
-    elements.push_back(element);
+    for (ToDoElement &e: elements) {
+        if (e == element) {
+            return false;
+        }
+    }
     return true;
 }
 
 bool ToDoList::addElement(const string &title, const string &content, int priority) {
+    if (title.empty()) {
+        return false;
+    }
+    if (title.find("|") or content.find("|")) {
+        return false;
+    }
+    for (ToDoElement &e: elements) {
+        if (e == title) {
+            return false;
+        }
+    }
     ToDoElement element(title, content, priority);
-    elements.push_back(element);
     return true;
 }
 
 bool ToDoList::removeElementByTitle(const string &title) {
+    bool ret = false;
     for (ToDoElement &element: elements) {
         if (title == element.getTitle()) {
             elements.erase(elements.begin());
+            ret = true;
         }
     }
-    return true;
+    return ret;
 }
 
 bool ToDoList::sortByPriority() {
@@ -147,12 +163,14 @@ bool ToDoList::sortByPriority() {
 }
 
 bool ToDoList::completeElementByTitle(const string &title) {
+    bool ret = false;
     for (ToDoElement &element: elements) {
-        if (title == element.getTitle()) {
+        if (title == element.getTitle() and !element.getCompleted()) {
             element.setCompleted();
+            ret = true;
         }
     }
-    return true;
+    return ret;
 }
 
 bool ToDoList::removeCompletedElements() {

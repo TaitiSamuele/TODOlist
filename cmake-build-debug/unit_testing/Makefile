@@ -95,6 +95,51 @@ rebuild_cache:
 rebuild_cache/fast: rebuild_cache
 .PHONY : rebuild_cache/fast
 
+# Special rule for the target list_install_components
+list_install_components:
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --cyan "Available install components are: \"gmock\" \"gtest\""
+.PHONY : list_install_components
+
+# Special rule for the target list_install_components
+list_install_components/fast: list_install_components
+.PHONY : list_install_components/fast
+
+# Special rule for the target install
+install: preinstall
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --cyan "Install the project..."
+	/usr/bin/cmake -P cmake_install.cmake
+.PHONY : install
+
+# Special rule for the target install
+install/fast: preinstall/fast
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --cyan "Install the project..."
+	/usr/bin/cmake -P cmake_install.cmake
+.PHONY : install/fast
+
+# Special rule for the target install/local
+install/local: preinstall
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --cyan "Installing only the local directory..."
+	/usr/bin/cmake -DCMAKE_INSTALL_LOCAL_ONLY=1 -P cmake_install.cmake
+.PHONY : install/local
+
+# Special rule for the target install/local
+install/local/fast: preinstall/fast
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --cyan "Installing only the local directory..."
+	/usr/bin/cmake -DCMAKE_INSTALL_LOCAL_ONLY=1 -P cmake_install.cmake
+.PHONY : install/local/fast
+
+# Special rule for the target install/strip
+install/strip: preinstall
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --cyan "Installing the project stripped..."
+	/usr/bin/cmake -DCMAKE_INSTALL_DO_STRIP=1 -P cmake_install.cmake
+.PHONY : install/strip
+
+# Special rule for the target install/strip
+install/strip/fast: preinstall/fast
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --cyan "Installing the project stripped..."
+	/usr/bin/cmake -DCMAKE_INSTALL_DO_STRIP=1 -P cmake_install.cmake
+.PHONY : install/strip/fast
+
 # The main all target
 all: cmake_check_build_system
 	cd /mnt/c/Users/samue/CLionProjects/untitled1/cmake-build-debug && $(CMAKE_COMMAND) -E cmake_progress_start /mnt/c/Users/samue/CLionProjects/untitled1/cmake-build-debug/CMakeFiles /mnt/c/Users/samue/CLionProjects/untitled1/cmake-build-debug/unit_testing//CMakeFiles/progress.marks
@@ -126,6 +171,164 @@ depend:
 	cd /mnt/c/Users/samue/CLionProjects/untitled1/cmake-build-debug && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
 .PHONY : depend
 
+# Convenience name for target.
+unit_testing/CMakeFiles/runTests.dir/rule:
+	cd /mnt/c/Users/samue/CLionProjects/untitled1/cmake-build-debug && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 unit_testing/CMakeFiles/runTests.dir/rule
+.PHONY : unit_testing/CMakeFiles/runTests.dir/rule
+
+# Convenience name for target.
+runTests: unit_testing/CMakeFiles/runTests.dir/rule
+.PHONY : runTests
+
+# fast build rule for target.
+runTests/fast:
+	cd /mnt/c/Users/samue/CLionProjects/untitled1/cmake-build-debug && $(MAKE) $(MAKESILENT) -f unit_testing/CMakeFiles/runTests.dir/build.make unit_testing/CMakeFiles/runTests.dir/build
+.PHONY : runTests/fast
+
+__/ToDoElement.o: __/ToDoElement.cpp.o
+.PHONY : __/ToDoElement.o
+
+# target to build an object file
+__/ToDoElement.cpp.o:
+	cd /mnt/c/Users/samue/CLionProjects/untitled1/cmake-build-debug && $(MAKE) $(MAKESILENT) -f unit_testing/CMakeFiles/runTests.dir/build.make unit_testing/CMakeFiles/runTests.dir/__/ToDoElement.cpp.o
+.PHONY : __/ToDoElement.cpp.o
+
+__/ToDoElement.i: __/ToDoElement.cpp.i
+.PHONY : __/ToDoElement.i
+
+# target to preprocess a source file
+__/ToDoElement.cpp.i:
+	cd /mnt/c/Users/samue/CLionProjects/untitled1/cmake-build-debug && $(MAKE) $(MAKESILENT) -f unit_testing/CMakeFiles/runTests.dir/build.make unit_testing/CMakeFiles/runTests.dir/__/ToDoElement.cpp.i
+.PHONY : __/ToDoElement.cpp.i
+
+__/ToDoElement.s: __/ToDoElement.cpp.s
+.PHONY : __/ToDoElement.s
+
+# target to generate assembly for a file
+__/ToDoElement.cpp.s:
+	cd /mnt/c/Users/samue/CLionProjects/untitled1/cmake-build-debug && $(MAKE) $(MAKESILENT) -f unit_testing/CMakeFiles/runTests.dir/build.make unit_testing/CMakeFiles/runTests.dir/__/ToDoElement.cpp.s
+.PHONY : __/ToDoElement.cpp.s
+
+__/ToDoList.o: __/ToDoList.cpp.o
+.PHONY : __/ToDoList.o
+
+# target to build an object file
+__/ToDoList.cpp.o:
+	cd /mnt/c/Users/samue/CLionProjects/untitled1/cmake-build-debug && $(MAKE) $(MAKESILENT) -f unit_testing/CMakeFiles/runTests.dir/build.make unit_testing/CMakeFiles/runTests.dir/__/ToDoList.cpp.o
+.PHONY : __/ToDoList.cpp.o
+
+__/ToDoList.i: __/ToDoList.cpp.i
+.PHONY : __/ToDoList.i
+
+# target to preprocess a source file
+__/ToDoList.cpp.i:
+	cd /mnt/c/Users/samue/CLionProjects/untitled1/cmake-build-debug && $(MAKE) $(MAKESILENT) -f unit_testing/CMakeFiles/runTests.dir/build.make unit_testing/CMakeFiles/runTests.dir/__/ToDoList.cpp.i
+.PHONY : __/ToDoList.cpp.i
+
+__/ToDoList.s: __/ToDoList.cpp.s
+.PHONY : __/ToDoList.s
+
+# target to generate assembly for a file
+__/ToDoList.cpp.s:
+	cd /mnt/c/Users/samue/CLionProjects/untitled1/cmake-build-debug && $(MAKE) $(MAKESILENT) -f unit_testing/CMakeFiles/runTests.dir/build.make unit_testing/CMakeFiles/runTests.dir/__/ToDoList.cpp.s
+.PHONY : __/ToDoList.cpp.s
+
+__/ToDoListManager.o: __/ToDoListManager.cpp.o
+.PHONY : __/ToDoListManager.o
+
+# target to build an object file
+__/ToDoListManager.cpp.o:
+	cd /mnt/c/Users/samue/CLionProjects/untitled1/cmake-build-debug && $(MAKE) $(MAKESILENT) -f unit_testing/CMakeFiles/runTests.dir/build.make unit_testing/CMakeFiles/runTests.dir/__/ToDoListManager.cpp.o
+.PHONY : __/ToDoListManager.cpp.o
+
+__/ToDoListManager.i: __/ToDoListManager.cpp.i
+.PHONY : __/ToDoListManager.i
+
+# target to preprocess a source file
+__/ToDoListManager.cpp.i:
+	cd /mnt/c/Users/samue/CLionProjects/untitled1/cmake-build-debug && $(MAKE) $(MAKESILENT) -f unit_testing/CMakeFiles/runTests.dir/build.make unit_testing/CMakeFiles/runTests.dir/__/ToDoListManager.cpp.i
+.PHONY : __/ToDoListManager.cpp.i
+
+__/ToDoListManager.s: __/ToDoListManager.cpp.s
+.PHONY : __/ToDoListManager.s
+
+# target to generate assembly for a file
+__/ToDoListManager.cpp.s:
+	cd /mnt/c/Users/samue/CLionProjects/untitled1/cmake-build-debug && $(MAKE) $(MAKESILENT) -f unit_testing/CMakeFiles/runTests.dir/build.make unit_testing/CMakeFiles/runTests.dir/__/ToDoListManager.cpp.s
+.PHONY : __/ToDoListManager.cpp.s
+
+test_ToDoElement.o: test_ToDoElement.cpp.o
+.PHONY : test_ToDoElement.o
+
+# target to build an object file
+test_ToDoElement.cpp.o:
+	cd /mnt/c/Users/samue/CLionProjects/untitled1/cmake-build-debug && $(MAKE) $(MAKESILENT) -f unit_testing/CMakeFiles/runTests.dir/build.make unit_testing/CMakeFiles/runTests.dir/test_ToDoElement.cpp.o
+.PHONY : test_ToDoElement.cpp.o
+
+test_ToDoElement.i: test_ToDoElement.cpp.i
+.PHONY : test_ToDoElement.i
+
+# target to preprocess a source file
+test_ToDoElement.cpp.i:
+	cd /mnt/c/Users/samue/CLionProjects/untitled1/cmake-build-debug && $(MAKE) $(MAKESILENT) -f unit_testing/CMakeFiles/runTests.dir/build.make unit_testing/CMakeFiles/runTests.dir/test_ToDoElement.cpp.i
+.PHONY : test_ToDoElement.cpp.i
+
+test_ToDoElement.s: test_ToDoElement.cpp.s
+.PHONY : test_ToDoElement.s
+
+# target to generate assembly for a file
+test_ToDoElement.cpp.s:
+	cd /mnt/c/Users/samue/CLionProjects/untitled1/cmake-build-debug && $(MAKE) $(MAKESILENT) -f unit_testing/CMakeFiles/runTests.dir/build.make unit_testing/CMakeFiles/runTests.dir/test_ToDoElement.cpp.s
+.PHONY : test_ToDoElement.cpp.s
+
+test_ToDoList.o: test_ToDoList.cpp.o
+.PHONY : test_ToDoList.o
+
+# target to build an object file
+test_ToDoList.cpp.o:
+	cd /mnt/c/Users/samue/CLionProjects/untitled1/cmake-build-debug && $(MAKE) $(MAKESILENT) -f unit_testing/CMakeFiles/runTests.dir/build.make unit_testing/CMakeFiles/runTests.dir/test_ToDoList.cpp.o
+.PHONY : test_ToDoList.cpp.o
+
+test_ToDoList.i: test_ToDoList.cpp.i
+.PHONY : test_ToDoList.i
+
+# target to preprocess a source file
+test_ToDoList.cpp.i:
+	cd /mnt/c/Users/samue/CLionProjects/untitled1/cmake-build-debug && $(MAKE) $(MAKESILENT) -f unit_testing/CMakeFiles/runTests.dir/build.make unit_testing/CMakeFiles/runTests.dir/test_ToDoList.cpp.i
+.PHONY : test_ToDoList.cpp.i
+
+test_ToDoList.s: test_ToDoList.cpp.s
+.PHONY : test_ToDoList.s
+
+# target to generate assembly for a file
+test_ToDoList.cpp.s:
+	cd /mnt/c/Users/samue/CLionProjects/untitled1/cmake-build-debug && $(MAKE) $(MAKESILENT) -f unit_testing/CMakeFiles/runTests.dir/build.make unit_testing/CMakeFiles/runTests.dir/test_ToDoList.cpp.s
+.PHONY : test_ToDoList.cpp.s
+
+test_ToDoManager.o: test_ToDoManager.cpp.o
+.PHONY : test_ToDoManager.o
+
+# target to build an object file
+test_ToDoManager.cpp.o:
+	cd /mnt/c/Users/samue/CLionProjects/untitled1/cmake-build-debug && $(MAKE) $(MAKESILENT) -f unit_testing/CMakeFiles/runTests.dir/build.make unit_testing/CMakeFiles/runTests.dir/test_ToDoManager.cpp.o
+.PHONY : test_ToDoManager.cpp.o
+
+test_ToDoManager.i: test_ToDoManager.cpp.i
+.PHONY : test_ToDoManager.i
+
+# target to preprocess a source file
+test_ToDoManager.cpp.i:
+	cd /mnt/c/Users/samue/CLionProjects/untitled1/cmake-build-debug && $(MAKE) $(MAKESILENT) -f unit_testing/CMakeFiles/runTests.dir/build.make unit_testing/CMakeFiles/runTests.dir/test_ToDoManager.cpp.i
+.PHONY : test_ToDoManager.cpp.i
+
+test_ToDoManager.s: test_ToDoManager.cpp.s
+.PHONY : test_ToDoManager.s
+
+# target to generate assembly for a file
+test_ToDoManager.cpp.s:
+	cd /mnt/c/Users/samue/CLionProjects/untitled1/cmake-build-debug && $(MAKE) $(MAKESILENT) -f unit_testing/CMakeFiles/runTests.dir/build.make unit_testing/CMakeFiles/runTests.dir/test_ToDoManager.cpp.s
+.PHONY : test_ToDoManager.cpp.s
+
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -133,8 +336,31 @@ help:
 	@echo "... clean"
 	@echo "... depend"
 	@echo "... edit_cache"
+	@echo "... install"
+	@echo "... install/local"
+	@echo "... install/strip"
+	@echo "... list_install_components"
 	@echo "... rebuild_cache"
 	@echo "... test"
+	@echo "... runTests"
+	@echo "... __/ToDoElement.o"
+	@echo "... __/ToDoElement.i"
+	@echo "... __/ToDoElement.s"
+	@echo "... __/ToDoList.o"
+	@echo "... __/ToDoList.i"
+	@echo "... __/ToDoList.s"
+	@echo "... __/ToDoListManager.o"
+	@echo "... __/ToDoListManager.i"
+	@echo "... __/ToDoListManager.s"
+	@echo "... test_ToDoElement.o"
+	@echo "... test_ToDoElement.i"
+	@echo "... test_ToDoElement.s"
+	@echo "... test_ToDoList.o"
+	@echo "... test_ToDoList.i"
+	@echo "... test_ToDoList.s"
+	@echo "... test_ToDoManager.o"
+	@echo "... test_ToDoManager.i"
+	@echo "... test_ToDoManager.s"
 .PHONY : help
 
 

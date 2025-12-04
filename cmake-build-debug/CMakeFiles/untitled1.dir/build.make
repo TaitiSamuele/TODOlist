@@ -125,57 +125,12 @@ CMakeFiles/untitled1.dir/ToDoElement.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/untitled1.dir/ToDoElement.cpp.s"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /mnt/c/Users/samue/CLionProjects/untitled1/ToDoElement.cpp -o CMakeFiles/untitled1.dir/ToDoElement.cpp.s
 
-CMakeFiles/untitled1.dir/unit_testing/test_ToDOElement.cpp.o: CMakeFiles/untitled1.dir/flags.make
-CMakeFiles/untitled1.dir/unit_testing/test_ToDOElement.cpp.o: /mnt/c/Users/samue/CLionProjects/untitled1/unit_testing/test_ToDOElement.cpp
-CMakeFiles/untitled1.dir/unit_testing/test_ToDOElement.cpp.o: CMakeFiles/untitled1.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/mnt/c/Users/samue/CLionProjects/untitled1/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object CMakeFiles/untitled1.dir/unit_testing/test_ToDOElement.cpp.o"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/untitled1.dir/unit_testing/test_ToDOElement.cpp.o -MF CMakeFiles/untitled1.dir/unit_testing/test_ToDOElement.cpp.o.d -o CMakeFiles/untitled1.dir/unit_testing/test_ToDOElement.cpp.o -c /mnt/c/Users/samue/CLionProjects/untitled1/unit_testing/test_ToDOElement.cpp
-
-CMakeFiles/untitled1.dir/unit_testing/test_ToDOElement.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/untitled1.dir/unit_testing/test_ToDOElement.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /mnt/c/Users/samue/CLionProjects/untitled1/unit_testing/test_ToDOElement.cpp > CMakeFiles/untitled1.dir/unit_testing/test_ToDOElement.cpp.i
-
-CMakeFiles/untitled1.dir/unit_testing/test_ToDOElement.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/untitled1.dir/unit_testing/test_ToDOElement.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /mnt/c/Users/samue/CLionProjects/untitled1/unit_testing/test_ToDOElement.cpp -o CMakeFiles/untitled1.dir/unit_testing/test_ToDOElement.cpp.s
-
-CMakeFiles/untitled1.dir/unit_testing/test_ToDoList.cpp.o: CMakeFiles/untitled1.dir/flags.make
-CMakeFiles/untitled1.dir/unit_testing/test_ToDoList.cpp.o: /mnt/c/Users/samue/CLionProjects/untitled1/unit_testing/test_ToDoList.cpp
-CMakeFiles/untitled1.dir/unit_testing/test_ToDoList.cpp.o: CMakeFiles/untitled1.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/mnt/c/Users/samue/CLionProjects/untitled1/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object CMakeFiles/untitled1.dir/unit_testing/test_ToDoList.cpp.o"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/untitled1.dir/unit_testing/test_ToDoList.cpp.o -MF CMakeFiles/untitled1.dir/unit_testing/test_ToDoList.cpp.o.d -o CMakeFiles/untitled1.dir/unit_testing/test_ToDoList.cpp.o -c /mnt/c/Users/samue/CLionProjects/untitled1/unit_testing/test_ToDoList.cpp
-
-CMakeFiles/untitled1.dir/unit_testing/test_ToDoList.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/untitled1.dir/unit_testing/test_ToDoList.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /mnt/c/Users/samue/CLionProjects/untitled1/unit_testing/test_ToDoList.cpp > CMakeFiles/untitled1.dir/unit_testing/test_ToDoList.cpp.i
-
-CMakeFiles/untitled1.dir/unit_testing/test_ToDoList.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/untitled1.dir/unit_testing/test_ToDoList.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /mnt/c/Users/samue/CLionProjects/untitled1/unit_testing/test_ToDoList.cpp -o CMakeFiles/untitled1.dir/unit_testing/test_ToDoList.cpp.s
-
-CMakeFiles/untitled1.dir/unit_testing/test_ToDoManager.cpp.o: CMakeFiles/untitled1.dir/flags.make
-CMakeFiles/untitled1.dir/unit_testing/test_ToDoManager.cpp.o: /mnt/c/Users/samue/CLionProjects/untitled1/unit_testing/test_ToDoManager.cpp
-CMakeFiles/untitled1.dir/unit_testing/test_ToDoManager.cpp.o: CMakeFiles/untitled1.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/mnt/c/Users/samue/CLionProjects/untitled1/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Building CXX object CMakeFiles/untitled1.dir/unit_testing/test_ToDoManager.cpp.o"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/untitled1.dir/unit_testing/test_ToDoManager.cpp.o -MF CMakeFiles/untitled1.dir/unit_testing/test_ToDoManager.cpp.o.d -o CMakeFiles/untitled1.dir/unit_testing/test_ToDoManager.cpp.o -c /mnt/c/Users/samue/CLionProjects/untitled1/unit_testing/test_ToDoManager.cpp
-
-CMakeFiles/untitled1.dir/unit_testing/test_ToDoManager.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/untitled1.dir/unit_testing/test_ToDoManager.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /mnt/c/Users/samue/CLionProjects/untitled1/unit_testing/test_ToDoManager.cpp > CMakeFiles/untitled1.dir/unit_testing/test_ToDoManager.cpp.i
-
-CMakeFiles/untitled1.dir/unit_testing/test_ToDoManager.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/untitled1.dir/unit_testing/test_ToDoManager.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /mnt/c/Users/samue/CLionProjects/untitled1/unit_testing/test_ToDoManager.cpp -o CMakeFiles/untitled1.dir/unit_testing/test_ToDoManager.cpp.s
-
 # Object files for target untitled1
 untitled1_OBJECTS = \
 "CMakeFiles/untitled1.dir/main.cpp.o" \
 "CMakeFiles/untitled1.dir/ToDoList.cpp.o" \
 "CMakeFiles/untitled1.dir/ToDoListManager.cpp.o" \
-"CMakeFiles/untitled1.dir/ToDoElement.cpp.o" \
-"CMakeFiles/untitled1.dir/unit_testing/test_ToDOElement.cpp.o" \
-"CMakeFiles/untitled1.dir/unit_testing/test_ToDoList.cpp.o" \
-"CMakeFiles/untitled1.dir/unit_testing/test_ToDoManager.cpp.o"
+"CMakeFiles/untitled1.dir/ToDoElement.cpp.o"
 
 # External object files for target untitled1
 untitled1_EXTERNAL_OBJECTS =
@@ -184,12 +139,9 @@ untitled1: CMakeFiles/untitled1.dir/main.cpp.o
 untitled1: CMakeFiles/untitled1.dir/ToDoList.cpp.o
 untitled1: CMakeFiles/untitled1.dir/ToDoListManager.cpp.o
 untitled1: CMakeFiles/untitled1.dir/ToDoElement.cpp.o
-untitled1: CMakeFiles/untitled1.dir/unit_testing/test_ToDOElement.cpp.o
-untitled1: CMakeFiles/untitled1.dir/unit_testing/test_ToDoList.cpp.o
-untitled1: CMakeFiles/untitled1.dir/unit_testing/test_ToDoManager.cpp.o
 untitled1: CMakeFiles/untitled1.dir/build.make
 untitled1: CMakeFiles/untitled1.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=/mnt/c/Users/samue/CLionProjects/untitled1/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Linking CXX executable untitled1"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=/mnt/c/Users/samue/CLionProjects/untitled1/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Linking CXX executable untitled1"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/untitled1.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.

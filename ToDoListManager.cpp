@@ -25,7 +25,7 @@ void ToDoListManager::menu() {
                 cout << "inserisci il nome del file per la nuova lista: ";
                 cin >> fileName;
                 addList(fileName);
-                saveListsToFile();
+                //saveListsToFile();
             }
             break;
             case 'e': {
@@ -34,7 +34,7 @@ void ToDoListManager::menu() {
                 cout << "inserisci il nome del file della lista da rimuovere: ";
                 cin >> fileName;
                 removeListByFileName(fileName);
-                saveListsToFile();
+                //saveListsToFile();
             }
             break;
             case 'r': {
@@ -91,13 +91,19 @@ bool ToDoListManager::removeListByFileName(const string &fileName) {
             lists.erase(lists.begin() + i);
             const char* char_fileName = ("../files/" + fileName).c_str();
             remove(char_fileName);
+            return true;
         }
         i++;
     }
-    return true;
+    return false;
 }
 
 bool ToDoListManager::addList(const string &fileName){
+    for (ToDoList &list: lists) {
+        if (list == fileName) {
+            return false;
+        }
+    }
     lists.push_back(ToDoList(fileName));
     return true;
 }

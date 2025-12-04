@@ -46,6 +46,9 @@ public:
    string getTitle() {
       return title;
    }
+   string getContent() const {
+      return content;
+   }
    int getPriority() {
       return priority;
    }
@@ -55,9 +58,18 @@ public:
    void setCompleted() {
       completed = true;
    }
+   string getDate() const {
+      return date;
+   }
 
    int operator< (const ToDoElement& other) const {
       return this->priority < other.priority;
+   }
+   bool operator==(const ToDoElement &other) const {
+      return this->title == other.title;
+   }
+   bool operator==(const string& s) const {
+      return this->title == s;
    }
 
 };
