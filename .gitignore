@@ -3,5 +3,6 @@
 .vscode/
 .files/*.txt
 lists.txt
+cmake-build-debug
 
 .exe
