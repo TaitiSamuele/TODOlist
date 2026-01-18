@@ -11,7 +11,7 @@ TEST(ToDoManagerTest, Add_RemoveTest) {
     EXPECT_FALSE(manager.addList("Another_testlist.txt"));
 
     EXPECT_TRUE(manager.removeListByFileName("testlist.txt"));
-    EXPECT_TRUE(manager.removeListByFileName("testlist.txt"));
+    EXPECT_FALSE(manager.removeListByFileName("testlist.txt"));
     EXPECT_FALSE(manager.removeListByFileName("nonexistent.txt"));
 
 }

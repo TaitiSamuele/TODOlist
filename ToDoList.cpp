@@ -22,7 +22,7 @@ void ToDoList::menu() {
         cout << "g: rimuovi elementi completati\n";
         cout << "h: stampa elementi\n";
         cout << "j: salva su file\n";
-        cout << "k: carica da file\n";
+        //cout << "k: carica da file\n";
         cout << "q: esci\n";
         cout << "inserisci scelta: ";
         cin >> choice;
@@ -38,7 +38,7 @@ void ToDoList::menu() {
                 cout << "inserisci contenuto: ";
                 getline(cin,content);
                 cout << "inserisci priorita (1 la massima -> 10 la minima (valori < 1 vengono inseriti massimi, > 10 vine inserito il minimo): ";
-                try{cin >> priority;}catch (exception){cout<<"errore nell' inserimento della pririta, l'insertimento no e' andato a buon fine\n"; break;}
+                try{cin >> priority;}catch (exception){cout<<"\nerrore nell' inserimento della priorita, l'insertimento non e' andato a buon fine\n"; break;}
                 addElement(title, content, priority);
             }
             break;
@@ -81,11 +81,11 @@ void ToDoList::menu() {
                 printElementsOnFile();
             }
             break;
-            case 'k': {
+            /*case 'k': {
                 //load from file
                 cout<<"caricamento da file...\n";
                 getElementsOnFile();
-            }
+            }*/
             break;
             case 'q':
                 cout << "uscita...\n";
