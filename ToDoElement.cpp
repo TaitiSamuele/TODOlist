@@ -39,7 +39,7 @@ bool ToDoElement::fill(string message) {
 
 string ToDoElement::toString() {
     string s;
-    s += "\033[33m" + title + "\033[0m\n\t" + content + "\n\t" + date + "\n\tPriority: " + to_string(priority) + "\n\tCompleted: " + (completed ? "\033[32mYes\033[0m" : "\033[31mNo\033[0m") + "\n";
+    s += "\033[33m" + title + "\033[0m\n\t" + content + "\n\t" + date + "\n\tpriorita': " + to_string(priority) + "\n\tCompleto?: " + (completed ? "\033[32mSI !!!\033[0m" : "\033[31mNO ):\033[0m") + "\n";
     return s;
 }
 

@@ -14,7 +14,7 @@ void ToDoList::menu() {
     //clear input buffer
     do {
         //clear terminal and show menu
-        cout << "\nMenu ToDoList:\n";
+        cout << "\nMenu ToDoList " << filePath <<":\n";
         cout << "a: aggiungi elemento\n";
         cout << "s: rimuovi elemento per titolo\n";
         cout << "d: ordina per priorita\n";
@@ -32,7 +32,7 @@ void ToDoList::menu() {
                 string title, content;
                 int priority;
                 cin.ignore(numeric_limits<streamsize>::max(), '\n');
-                cout<<"non usare il carattere '|' poichè indurrebbe a errore";
+                cout<<"non usare il carattere '|' poichè indurrebbe a errori\n";
                 cout << "inserisci titolo: ";
                 getline(cin,title);
                 cout << "inserisci contenuto: ";
@@ -108,7 +108,7 @@ bool ToDoList::getElementsOnFile() {
     ifstream file("../files/" + filePath);
     while (file >> line) {
         ToDoElement element(line);
-        elements.push_back(element);
+        addElement(element);
     }
     return true;
 }
@@ -127,6 +127,7 @@ bool ToDoList::addElement(const ToDoElement &element) {
             return false;
         }
     }
+    elements.push_back(element);
     return true;
 }
 
@@ -134,25 +135,30 @@ bool ToDoList::addElement(const string &title, const string &content, int priori
     if (title.empty()) {
         return false;
     }
-    if (title.find("|") or content.find("|")) {
+    if (title.find("|") != -1 or content.find("|") != -1) {
+        cout<<"Errore: il carattere '|' non e' permesso nel titolo o nel contenuto\n";
         return false;
     }
     for (ToDoElement &e: elements) {
         if (e == title) {
+            cout<<"Errore: esiste gia' un elemento con questo titolo\n";
             return false;
         }
     }
     ToDoElement element(title, content, priority);
+    elements.push_back(element);
     return true;
 }
 
 bool ToDoList::removeElementByTitle(const string &title) {
     bool ret = false;
+    int i = 0;
     for (ToDoElement &element: elements) {
         if (title == element.getTitle()) {
-            elements.erase(elements.begin());
+            elements.erase(elements.begin()+i);
             ret = true;
         }
+        i++;
     }
     return ret;
 }
